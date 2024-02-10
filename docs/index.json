@@ -1,0 +1,77 @@
+{
+  "api/ArduinoUploader.ArduinoSketchUploader.html": {
+    "href": "api/ArduinoUploader.ArduinoSketchUploader.html",
+    "title": "Class ArduinoSketchUploader | ArduinoUploaderCore",
+    "keywords": "Class ArduinoSketchUploader Namespace ArduinoUploader Assembly ArduinoUploader.dll Main Sketch Uploader Class public class ArduinoSketchUploader Inheritance object ArduinoSketchUploader Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors ArduinoSketchUploader(ArduinoSketchUploaderOptions, IArduinoUploaderLogger, IProgress<double>) Initializes a new instance of the ArduinoSketchUploader class. public ArduinoSketchUploader(ArduinoSketchUploaderOptions options, IArduinoUploaderLogger logger = null, IProgress<double> progress = null) Parameters options ArduinoSketchUploaderOptions The options. logger IArduinoUploaderLogger The logger. progress IProgress<double> The progress. Methods UploadSketch() Uploads the sketch using the FileName property of the options used in the class constructor. public void UploadSketch() UploadSketch(IEnumerable<string>) Uploads the sketch passed as parameter. public void UploadSketch(IEnumerable<string> hexFileContents) Parameters hexFileContents IEnumerable<string> The hexadecimal file contents as lines of strings."
+  },
+  "api/ArduinoUploader.ArduinoSketchUploaderOptions.html": {
+    "href": "api/ArduinoUploader.ArduinoSketchUploaderOptions.html",
+    "title": "Class ArduinoSketchUploaderOptions | ArduinoUploaderCore",
+    "keywords": "Class ArduinoSketchUploaderOptions Namespace ArduinoUploader Assembly ArduinoUploader.dll Options for the ArduinoSketchUploader class public class ArduinoSketchUploaderOptions Inheritance object ArduinoSketchUploaderOptions Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties ArduinoModel Gets or sets the arduino model. public ArduinoModel ArduinoModel { get; set; } Property Value ArduinoModel FileName Gets or sets the name of the file. public string FileName { get; set; } Property Value string PortName Gets or sets the name of the port. Will attempt to auto-detect if not provided. public string PortName { get; set; } Property Value string"
+  },
+  "api/ArduinoUploader.ArduinoUploaderException.html": {
+    "href": "api/ArduinoUploader.ArduinoUploaderException.html",
+    "title": "Class ArduinoUploaderException | ArduinoUploaderCore",
+    "keywords": "Class ArduinoUploaderException Namespace ArduinoUploader Assembly ArduinoUploader.dll Exception thrown when error occurs in this library public class ArduinoUploaderException : Exception, ISerializable Inheritance object Exception ArduinoUploaderException Implements ISerializable Inherited Members Exception.GetBaseException() Exception.GetObjectData(SerializationInfo, StreamingContext) Exception.GetType() Exception.ToString() Exception.Data Exception.HelpLink Exception.HResult Exception.InnerException Exception.Message Exception.Source Exception.StackTrace Exception.TargetSite Exception.SerializeObjectState object.Equals(object) object.Equals(object, object) object.GetHashCode() object.MemberwiseClone() object.ReferenceEquals(object, object) Constructors ArduinoUploaderException(string) Initializes a new instance of the ArduinoUploaderException class. public ArduinoUploaderException(string message) Parameters message string The message that describes the error. See Also Exception"
+  },
+  "api/ArduinoUploader.BootloaderProgrammers.Protocols.Request.html": {
+    "href": "api/ArduinoUploader.BootloaderProgrammers.Protocols.Request.html",
+    "title": "Class Request | ArduinoUploaderCore",
+    "keywords": "Class Request Namespace ArduinoUploader.BootloaderProgrammers.Protocols Assembly ArduinoUploader.dll public abstract class Request Inheritance object Request Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties Bytes public byte[] Bytes { get; set; } Property Value byte[]"
+  },
+  "api/ArduinoUploader.BootloaderProgrammers.Protocols.html": {
+    "href": "api/ArduinoUploader.BootloaderProgrammers.Protocols.html",
+    "title": "Namespace ArduinoUploader.BootloaderProgrammers.Protocols | ArduinoUploaderCore",
+    "keywords": "Namespace ArduinoUploader.BootloaderProgrammers.Protocols Classes Request"
+  },
+  "api/ArduinoUploader.Config.Arduino.html": {
+    "href": "api/ArduinoUploader.Config.Arduino.html",
+    "title": "Class Arduino | ArduinoUploaderCore",
+    "keywords": "Class Arduino Namespace ArduinoUploader.Config Assembly ArduinoUploader.dll public class Arduino Inheritance object Arduino Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties BaudRate public int BaudRate { get; set; } Property Value int CloseResetBehavior public string CloseResetBehavior { get; set; } Property Value string Mcu public McuIdentifier Mcu { get; set; } Property Value McuIdentifier Model public string Model { get; set; } Property Value string PostOpenResetBehavior public string PostOpenResetBehavior { get; set; } Property Value string PreOpenResetBehavior public string PreOpenResetBehavior { get; set; } Property Value string Protocol public Protocol Protocol { get; set; } Property Value Protocol ReadTimeout public int ReadTimeout { get; set; } Property Value int SleepAfterOpen public int SleepAfterOpen { get; set; } Property Value int WriteTimeout public int WriteTimeout { get; set; } Property Value int"
+  },
+  "api/ArduinoUploader.Config.Configuration.html": {
+    "href": "api/ArduinoUploader.Config.Configuration.html",
+    "title": "Class Configuration | ArduinoUploaderCore",
+    "keywords": "Class Configuration Namespace ArduinoUploader.Config Assembly ArduinoUploader.dll public class Configuration Inheritance object Configuration Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties Arduinos public Arduino[] Arduinos { get; set; } Property Value Arduino[]"
+  },
+  "api/ArduinoUploader.Config.McuIdentifier.html": {
+    "href": "api/ArduinoUploader.Config.McuIdentifier.html",
+    "title": "Enum McuIdentifier | ArduinoUploaderCore",
+    "keywords": "Enum McuIdentifier Namespace ArduinoUploader.Config Assembly ArduinoUploader.dll public enum McuIdentifier Fields AtMega1284 = 0 AtMega168 = 3 AtMega2560 = 1 AtMega328P = 4 AtMega32U4 = 2"
+  },
+  "api/ArduinoUploader.Config.Protocol.html": {
+    "href": "api/ArduinoUploader.Config.Protocol.html",
+    "title": "Enum Protocol | ArduinoUploaderCore",
+    "keywords": "Enum Protocol Namespace ArduinoUploader.Config Assembly ArduinoUploader.dll public enum Protocol Fields Avr109 = 2 Stk500v1 = 0 Stk500v2 = 1"
+  },
+  "api/ArduinoUploader.Config.html": {
+    "href": "api/ArduinoUploader.Config.html",
+    "title": "Namespace ArduinoUploader.Config | ArduinoUploaderCore",
+    "keywords": "Namespace ArduinoUploader.Config Classes Arduino Configuration Enums McuIdentifier Protocol"
+  },
+  "api/ArduinoUploader.Hardware.ArduinoModel.html": {
+    "href": "api/ArduinoUploader.Hardware.ArduinoModel.html",
+    "title": "Enum ArduinoModel | ArduinoUploaderCore",
+    "keywords": "Enum ArduinoModel Namespace ArduinoUploader.Hardware Assembly ArduinoUploader.dll The Arduino model to use in the configuration public enum ArduinoModel Fields Leonardo = 0 Mega1284 = 1 Mega2560 = 2 Micro = 3 NanoR2 = 4 NanoR3 = 5 NanoR3Old = 6 UnoR3 = 7"
+  },
+  "api/ArduinoUploader.Hardware.html": {
+    "href": "api/ArduinoUploader.Hardware.html",
+    "title": "Namespace ArduinoUploader.Hardware | ArduinoUploaderCore",
+    "keywords": "Namespace ArduinoUploader.Hardware Enums ArduinoModel The Arduino model to use in the configuration"
+  },
+  "api/ArduinoUploader.IArduinoUploaderLogger.html": {
+    "href": "api/ArduinoUploader.IArduinoUploaderLogger.html",
+    "title": "Interface IArduinoUploaderLogger | ArduinoUploaderCore",
+    "keywords": "Interface IArduinoUploaderLogger Namespace ArduinoUploader Assembly ArduinoUploader.dll Interface for the ArduinoUploader logger public interface IArduinoUploaderLogger Methods Debug(string) Called to log a debug message void Debug(string message) Parameters message string The message. Error(string, Exception) Called to log an error void Error(string message, Exception exception) Parameters message string The message. exception Exception The exception. Info(string) Called to log an information message void Info(string message) Parameters message string The message. Trace(string) Called to log a trace message void Trace(string message) Parameters message string The message. Warn(string) Called to log a warning void Warn(string message) Parameters message string The message."
+  },
+  "api/ArduinoUploader.html": {
+    "href": "api/ArduinoUploader.html",
+    "title": "Namespace ArduinoUploader | ArduinoUploaderCore",
+    "keywords": "Namespace ArduinoUploader Classes ArduinoSketchUploader Main Sketch Uploader Class ArduinoSketchUploaderOptions Options for the ArduinoSketchUploader class ArduinoUploaderException Exception thrown when error occurs in this library Interfaces IArduinoUploaderLogger Interface for the ArduinoUploader logger"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "Main | ArduinoUploaderCore",
+    "keywords": "ArduinoUploaderCore This is a fork of the ArduinoSketchUploader project created by Christophe Diericx. It has been altered to use .NET Standard and .NET 6 as well as adding support for the new Arduino Nano Bootloader. This is a .NET library and a corresponding Windows command line utility that can be used to upload a compiled sketch (.HEX) directly to an Arduino board over USB. It talks to the boards bootloader over the serial (USB) connection, much like avrdude does (when invoked from the Arduino IDE, or from the command line). Compatibility The library has been tested with the following configurations: Arduino Model MCU Bootloader protocol Leonardo ATMega32U4 AVR109 Mega 1284 ATMega1284 STK500v1 Mega 2560 ATMega2560 STK500v2 Micro ATMega32U4 AVR109 Nano (R2) ATMega168 STK500v1 Nano (R3) ATMega328P STK500v1 Uno (R3) ATMega328P STK500v1 If you have a need for this library to run on another Arduino model, feel free to open an issue on GitHub, it should be relatively straightforward to add support (for most). Support for Mega 1284 was added by https://github.com/sijk, thanks! How to use the command line application Download the latest Windows binaries here (.zip file, version 3.2.0). When running ArduinoSketchUploader.exe without arguments, the application will document its usage: ArduinoSketchUploader 4.0.0.0 Copyright c Christophe Diericx 2016 - 2018 ERROR(S): -f/--file required option is missing. -m/--model required option is missing. -f, --file Required. Path to the input file (in intel HEX format) which is to be uploaded to the Arduino. -p, --port Name of the COM port where the Arduino is attached (e.g. 'COM1', 'COM2', 'COM3'...). -m, --model Required. Arduino model. Valid parameters are any of the following: [Leonardo, Mega1284, Mega2560, Micro, NanoR2, NanoR3, UnoR3]. --help Display this help screen. A sample command line invocation (for a Mega2560 type Arduino attached to COM4): ArduinoSketchUploader.exe --file=C:\\MyHexFiles\\myHexFile.hex --port=COM4 --model=Mega2560 If only a single COM port is in use on the system (used by the attached Arduino), one can omit the port: ArduinoSketchUploader.exe --file=C:\\MyHexFiles\\myHexFile.hex --model=UnoR3 How to use the .NET library Link the following nuget package in your project in order to use the ArduinoUploader: https://www.nuget.org/packages/ArduinoUploaderCore/ Alternatively, install the package using the nuget package manager console: Install-Package ArduinoUploader The following minimal snippet shows how to upload a .HEX file to an Arduino (UNO) board attached at COM port 3: var uploader = new ArduinoSketchUploader( new ArduinoSketchUploaderOptions() { FileName = @\"C:\\MyHexFiles\\UnoHexFile.ino.hex\", PortName = \"COM3\", ArduinoModel = ArduinoModel.UnoR3 }); uploader.UploadSketch(); As discussed above, one can try to auto-detect the COM port by omitting it. Logging In earlier versions of the library, it emitted log messages through a dependency on NLog. From an architectural point of view, it is suboptimal to be forcing a dependency on a particular logging framework from library code. A simple IArduinoUploaderLogger interface is exposed from within the library. Implement this interface, and pass an instance into the ArduinoSketchUploader constructor if you want to consume log messages (in varying levels, from Info to Trace). Implementing the interface using NLog consists of nothing more than this: private class NLogArduinoUploaderLogger : IArduinoUploaderLogger { private static readonly Logger Logger = LogManager.GetLogger(\"ArduinoSketchUploader\"); public void Error(string message, Exception exception) { Logger.Error(exception, message); } public void Warn(string message) { Logger.Warn(message); } public void Info(string message) { Logger.Info(message); } public void Debug(string message) { Logger.Debug(message); } public void Trace(string message) { Logger.Trace(message); } }"
+  }
+}

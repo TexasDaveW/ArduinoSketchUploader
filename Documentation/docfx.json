@@ -1,0 +1,48 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../Source/ArduinoUploader",
+          "files": [
+            "**/*.csproj"
+          ]
+        }
+      ],
+      "dest": "api",
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "exclude": [
+          "docs/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "src": "../.",
+        "files": [
+          "Images/**"
+        ]
+      }
+    ],
+    "output": "../docs",
+    "template": [
+      "default",
+      "modern"
+    ],
+    "globalMetadata": {
+      "_appName": "ArduinoUploaderCore",
+      "_appTitle": "ArduinoUploaderCore",
+      "_appLogoPath": "Images/ArduinoIcon.png",
+      "_appFaviconPath": "Images/ArduinoIcon.png",
+      "_enableSearch": true,
+      "pdf": false
+    }
+  }
+}

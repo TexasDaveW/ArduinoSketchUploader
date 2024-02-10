@@ -1,5 +1,6 @@
 ﻿namespace ArduinoUploader.Config
 {
+    /// <exclude />
     public enum McuIdentifier
     {
         AtMega1284,

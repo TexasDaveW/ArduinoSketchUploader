@@ -2,6 +2,7 @@
 
 namespace ArduinoUploader.Config
 {
+    /// <exclude />
     [SuppressMessage("ReSharper", "InconsistentNaming")]
     public enum Protocol
     {

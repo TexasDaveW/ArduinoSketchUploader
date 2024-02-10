@@ -18,6 +18,9 @@ using RJCP.IO.Ports;
 
 namespace ArduinoUploader
 {
+    /// <summary>
+    /// Main Sketch Uploader Class
+    /// </summary>
     public class ArduinoSketchUploader
     {
         internal static IArduinoUploaderLogger Logger { get; set; }
@@ -25,6 +28,12 @@ namespace ArduinoUploader
         private readonly ArduinoSketchUploaderOptions _options;
         private readonly IProgress<double> _progress;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ArduinoSketchUploader"/> class.
+        /// </summary>
+        /// <param name="options">The options.</param>
+        /// <param name="logger">The logger.</param>
+        /// <param name="progress">The progress.</param>
         public ArduinoSketchUploader(ArduinoSketchUploaderOptions options, 
             IArduinoUploaderLogger logger = null, IProgress<double> progress = null)
         {
@@ -34,6 +43,9 @@ namespace ArduinoUploader
             _progress = progress;
         }
 
+        /// <summary>
+        /// Uploads the sketch using the FileName property of the options used in the class constructor.
+        /// </summary>
         public void UploadSketch()
         {
             var hexFileName = _options.FileName;
@@ -51,6 +63,10 @@ namespace ArduinoUploader
             UploadSketch(hexFileContents);
         }
 
+        /// <summary>
+        /// Uploads the sketch passed as parameter.  
+        /// </summary>
+        /// <param name="hexFileContents">The hexadecimal file contents as lines of strings.</param>
         public void UploadSketch(IEnumerable<string> hexFileContents)
         {
             try

@@ -2,6 +2,7 @@
 
 namespace ArduinoUploader.Config
 {
+    /// <exclude />
     public class Arduino
     {
         [XmlAttribute("model")]

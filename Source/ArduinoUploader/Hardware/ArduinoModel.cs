@@ -1,5 +1,8 @@
 ﻿namespace ArduinoUploader.Hardware
 {
+    /// <summary>
+    /// The Arduino model to use in the configuration
+    /// </summary>
     public enum ArduinoModel
     {
         Leonardo,

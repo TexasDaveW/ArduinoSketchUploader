@@ -1,0 +1,225 @@
+{
+  "source_base_path": "C:/Projects/Handhelds/Common/ArdunioSketchUploader/Documentation",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../Images/ArduinoIcon.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/ArduinoIcon.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../Images/ArduinoSketchUploader.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/ArduinoSketchUploader.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../Images/Icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/Icon.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArduinoUploader.ArduinoSketchUploader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArduinoUploader.ArduinoSketchUploader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArduinoUploader.ArduinoSketchUploaderOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArduinoUploader.ArduinoSketchUploaderOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArduinoUploader.ArduinoUploaderException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArduinoUploader.ArduinoUploaderException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArduinoUploader.BootloaderProgrammers.Protocols.Request.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArduinoUploader.BootloaderProgrammers.Protocols.Request.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArduinoUploader.BootloaderProgrammers.Protocols.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArduinoUploader.BootloaderProgrammers.Protocols.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArduinoUploader.Config.Arduino.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArduinoUploader.Config.Arduino.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArduinoUploader.Config.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArduinoUploader.Config.Configuration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArduinoUploader.Config.McuIdentifier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArduinoUploader.Config.McuIdentifier.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArduinoUploader.Config.Protocol.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArduinoUploader.Config.Protocol.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArduinoUploader.Config.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArduinoUploader.Config.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArduinoUploader.Hardware.ArduinoModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArduinoUploader.Hardware.ArduinoModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArduinoUploader.Hardware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArduinoUploader.Hardware.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArduinoUploader.IArduinoUploaderLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArduinoUploader.IArduinoUploaderLogger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ArduinoUploader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ArduinoUploader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

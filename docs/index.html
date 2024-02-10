@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Main | ArduinoUploaderCore </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Main | ArduinoUploaderCore ">
+      
+      <link rel="icon" href="Images/ArduinoIcon.png">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/codaris/ArduinoSketchUploader/blob/master/Documentation/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="landing" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="Images/ArduinoIcon.png" alt="ArduinoUploaderCore">
+            ArduinoUploaderCore
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="arduinouploadercore">ArduinoUploaderCore</h1>
+
+<p>This is a fork of the <a href="https://github.com/twinearthsoftware/ArduinoSketchUploader">ArduinoSketchUploader</a> project created by Christophe Diericx. It has been altered to use .NET Standard and .NET 6 as well as adding support for the new Arduino Nano Bootloader.</p>
+<p>This is a .NET library and a corresponding Windows command line utility that can be used to upload a compiled sketch (.HEX) directly to an Arduino board over USB. It talks to the boards bootloader over the serial (USB) connection, much like <em>avrdude</em> does (when invoked from the Arduino IDE, or from the command line).</p>
+<p><img src="Images/ArduinoSketchUploader.png" alt=""></p>
+<h2 id="compatibility">Compatibility</h2>
+<p>The library has been tested with the following configurations:</p>
+<table>
+<thead>
+<tr>
+<th>Arduino Model</th>
+<th style="text-align: center;">MCU</th>
+<th style="text-align: right;">Bootloader protocol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Leonardo</td>
+<td style="text-align: center;">ATMega32U4</td>
+<td style="text-align: right;"><a href="/Documentation/AVR109.pdf">AVR109</a></td>
+</tr>
+<tr>
+<td>Mega 1284</td>
+<td style="text-align: center;">ATMega1284</td>
+<td style="text-align: right;"><a href="/Documentation/STK500v1.pdf">STK500v1</a></td>
+</tr>
+<tr>
+<td>Mega 2560</td>
+<td style="text-align: center;">ATMega2560</td>
+<td style="text-align: right;"><a href="/Documentation/STK500v2.pdf">STK500v2</a></td>
+</tr>
+<tr>
+<td>Micro</td>
+<td style="text-align: center;">ATMega32U4</td>
+<td style="text-align: right;"><a href="/Documentation/AVR109.pdf">AVR109</a></td>
+</tr>
+<tr>
+<td>Nano (R2)</td>
+<td style="text-align: center;">ATMega168</td>
+<td style="text-align: right;"><a href="/Documentation/STK500v1.pdf">STK500v1</a></td>
+</tr>
+<tr>
+<td>Nano (R3)</td>
+<td style="text-align: center;">ATMega328P</td>
+<td style="text-align: right;"><a href="/Documentation/STK500v1.pdf">STK500v1</a></td>
+</tr>
+<tr>
+<td>Uno (R3)</td>
+<td style="text-align: center;">ATMega328P</td>
+<td style="text-align: right;"><a href="/Documentation/STK500v1.pdf">STK500v1</a></td>
+</tr>
+</tbody>
+</table>
+<p><em>If you have a need for this library to run on another Arduino model, feel free to open an issue on GitHub, it should be relatively straightforward to add support (for most).</em></p>
+<p>Support for Mega 1284 was added by <a href="https://github.com/sijk">https://github.com/sijk</a>, thanks!</p>
+<h2 id="how-to-use-the-command-line-application">How to use the command line application</h2>
+<p><a href="https://github.com/christophediericx/ArduinoSketchUploader/releases/download/v3.2.0/ArduinoSketchUploader-3.2.0.zip">Download the latest Windows binaries here (.zip file, version 3.2.0).</a></p>
+<p>When running <em>ArduinoSketchUploader.exe</em> without arguments, the application will document its usage:</p>
+<pre><code>ArduinoSketchUploader 4.0.0.0
+Copyright c Christophe Diericx 2016 - 2018
+
+ERROR(S):
+  -f/--file required option is missing.
+  -m/--model required option is missing.
+
+
+  -f, --file     Required. Path to the input file (in intel HEX format) which
+                 is to be uploaded to the Arduino.
+
+  -p, --port     Name of the COM port where the Arduino is attached (e.g.
+                 'COM1', 'COM2', 'COM3'...).
+
+  -m, --model    Required. Arduino model. Valid parameters are any of the
+                 following: [Leonardo, Mega1284, Mega2560, Micro, NanoR2,
+                 NanoR3, UnoR3].
+
+  --help         Display this help screen.
+</code></pre>
+<p>A sample command line invocation (for a Mega2560 type Arduino attached to COM4):</p>
+<pre><code>ArduinoSketchUploader.exe --file=C:\MyHexFiles\myHexFile.hex --port=COM4 --model=Mega2560
+</code></pre>
+<p>If only a single COM port is in use on the system (used by the attached Arduino), one can omit the port:</p>
+<pre><code>ArduinoSketchUploader.exe --file=C:\MyHexFiles\myHexFile.hex --model=UnoR3
+</code></pre>
+<h2 id="how-to-use-the-net-library">How to use the .NET library</h2>
+<p><a href="https://badge.fury.io/nu/ArduinoUploaderCore"><img src="https://badge.fury.io/nu/ArduinoUploaderCore.svg" alt="NuGet version"></a></p>
+<p>Link the following nuget package in your project in order to use the ArduinoUploader: <a href="https://www.nuget.org/packages/ArduinoUploaderCore/">https://www.nuget.org/packages/ArduinoUploaderCore/</a></p>
+<p>Alternatively, install the package using the nuget package manager console:</p>
+<pre><code>Install-Package ArduinoUploader
+</code></pre>
+<p>The following minimal snippet shows how to upload a .HEX file to an Arduino (UNO) board attached at COM port 3:</p>
+<pre><code class="lang-csharp">var uploader = new ArduinoSketchUploader(
+    new ArduinoSketchUploaderOptions()
+    {
+        FileName = @&quot;C:\MyHexFiles\UnoHexFile.ino.hex&quot;,
+        PortName = &quot;COM3&quot;,
+        ArduinoModel = ArduinoModel.UnoR3
+    });
+
+uploader.UploadSketch();
+</code></pre>
+<blockquote>
+<p>As discussed above, one can try to auto-detect the COM port by omitting it.</p>
+</blockquote>
+<h2 id="logging">Logging</h2>
+<p>In earlier versions of the library, it emitted log messages through a dependency on <code>NLog</code>. From an architectural point of view, it is suboptimal to be forcing a dependency on a particular logging framework from library code.</p>
+<p>A simple <code>IArduinoUploaderLogger</code> interface is exposed from within the library. Implement this interface, and pass an instance into the ArduinoSketchUploader constructor if you want to consume log messages (in varying levels, from <em>Info</em> to <em>Trace</em>).</p>
+<p>Implementing the interface using <code>NLog</code> consists of nothing more than this:</p>
+<pre><code>private class NLogArduinoUploaderLogger : IArduinoUploaderLogger
+{
+    private static readonly Logger Logger = LogManager.GetLogger(&quot;ArduinoSketchUploader&quot;);
+
+    public void Error(string message, Exception exception)
+    {
+        Logger.Error(exception, message);
+    }
+
+    public void Warn(string message)
+    {
+        Logger.Warn(message);
+    }
+
+    public void Info(string message)
+    {
+        Logger.Info(message);
+    }
+
+    public void Debug(string message)
+    {
+        Logger.Debug(message);
+    }
+
+    public void Trace(string message)
+    {
+        Logger.Trace(message);
+    }
+}
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/codaris/ArduinoSketchUploader/blob/master/Documentation/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

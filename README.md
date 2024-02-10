@@ -1,8 +1,14 @@
-# ArduinoSketchUploader
+# ArduinoSketchUploaderCore
+
+## About this Fork
+
+This is a fork of the [ArduinoSketchUploader](https://github.com/twinearthsoftware/ArduinoSketchUploader) project created by Christophe Diericx. It has been altered to use .NET Standard and .NET 6 as well as adding support for the new Arduino Nano Bootloader.
+
+## About ArduinoSketchUploader
 
 This repository contains a .NET library and a corresponding Windows command line utility that can be used to upload a compiled sketch (.HEX) directly to an Arduino board over USB. It talks to the boards bootloader over the serial (USB) connection, much like *avrdude* does (when invoked from the Arduino IDE, or from the command line).
 
-![ArduinoSketchUploader](https://github.com/christophediericx/ArduinoSketchUploader/blob/master/Images/ArduinoSketchUploader.png)
+![ArduinoSketchUploader](Images/ArduinoSketchUploader.png)
 
 ## Compatibility ##
 
@@ -24,12 +30,12 @@ The library has been tested with the following configurations:
 
 ## How to use the command line application ##
 
-[Download the latest Windows binaries here (.zip file, version 3.2.0).](https://github.com/christophediericx/ArduinoSketchUploader/releases/download/v3.2.0/ArduinoSketchUploader-3.2.0.zip)
+[Download the latest Windows binaries here (.zip file, version 4.0.0).](https://github.com/christophediericx/ArduinoSketchUploader/releases/download/v3.2.0/ArduinoSketchUploader-3.2.0.zip)
 
 When running *ArduinoSketchUploader.exe* without arguments, the application will document its usage:
 
 ```
-ArduinoSketchUploader 3.2.0.0
+ArduinoSketchUploader 4.0.0.0
 Copyright c Christophe Diericx 2016 - 2018
 
 ERROR(S):
@@ -64,14 +70,14 @@ ArduinoSketchUploader.exe --file=C:\MyHexFiles\myHexFile.hex --model=UnoR3
 
 ## How to use the .NET library ##
 
-[![NuGet version](https://badge.fury.io/nu/ArduinoUploader.svg)](https://badge.fury.io/nu/ArduinoUploader)
+[![NuGet version](https://badge.fury.io/nu/ArduinoUploaderCore.svg)](https://badge.fury.io/nu/ArduinoUploaderCore)
 
-Link the following nuget package in your project in order to use the ArduinoUploader: https://www.nuget.org/packages/ArduinoUploader/
+Link the following nuget package in your project in order to use the ArduinoUploader: https://www.nuget.org/packages/ArduinoUploaderCore/
 
 Alternatively, install the package using the nuget package manager console:
 
 ```
-Install-Package ArduinoUploader
+Install-Package ArduinoUploaderCore
 ```
 
 The following minimal snippet shows how to upload a .HEX file to an Arduino (UNO) board attached at COM port 3:
