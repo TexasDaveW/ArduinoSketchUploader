@@ -1,25 +1,27 @@
 # ArduinoUploaderCore
 
-A .NET library and a corresponding Windows cthat can be used to upload a compiled sketch (.HEX) directly to an Arduino board over USB. It talks to the boards bootloader over the serial (USB) connection, much like *avrdude* does (when invoked from the Arduino IDE, or from the command line).
+A .NET library that can be used to upload a compiled sketch (.HEX) directly to an Arduino board over USB. It talks to the boards bootloader over the serial (USB) connection, much like *avrdude* does (when invoked from the Arduino IDE, or from the command line).
 
-This is a fork of the [ArduinoSketchUploader](https://github.com/twinearthsoftware/ArduinoSketchUploader) project created by Christophe Diericx. It has been altered to use .NET Standard as well as few other minor improvements.
+This is a fork of the [ArduinoSketchUploader](https://github.com/twinearthsoftware/ArduinoSketchUploader) project created by Christophe Diericx. It has been altered to use .NET Standard as well as adding support for the new Arduino Nano bootloader.
 
-## Compatibility ##
+This project is located at [https://github.com/codaris/ArduinoSketchUploader](https://github.com/codaris/ArduinoSketchUploader)
+
+## Compatibility 
 
 The library has been tested with the following configurations:
 
 | Arduino Model | MCU           | Bootloader protocol                                |
 | ------------- |:-------------:| --------------------------------------------------:|
-| Leonardo      | ATMega32U4    | [AVR109](/Documentation/AVR109.pdf)                |
-| Mega 1284     | ATMega1284    | [STK500v1](/Documentation/STK500v1.pdf)            |
-| Mega 2560     | ATMega2560    | [STK500v2](/Documentation/STK500v2.pdf)            |
-| Micro         | ATMega32U4    | [AVR109](/Documentation/AVR109.pdf)                |
-| Nano (R2)     | ATMega168     |  [STK500v1](/Documentation/STK500v1.pdf)           |
-| Nano (R3)     | ATMega328P    | [STK500v1](/Documentation/STK500v1.pdf)            |
-| Uno (R3)      | ATMega328P    | [STK500v1](/Documentation/STK500v1.pdf)            |
+| Leonardo      | ATMega32U4    | [AVR109](https://github.com/codaris/ArduinoSketchUploader/blob/master/Documentation/Documentation/AVR109.pdf)|
+| Mega 1284     | ATMega1284    | [STK500v1](https://github.com/codaris/ArduinoSketchUploader/blob/master/Documentation/Documentation/STK500v1.pdf)|
+| Mega 2560     | ATMega2560    | [STK500v2](https://github.com/codaris/ArduinoSketchUploader/blob/master/Documentation/Documentation/STK500v2.pdf)|
+| Micro         | ATMega32U4    | [AVR109](https://github.com/codaris/ArduinoSketchUploader/blob/master/Documentation/Documentation/AVR109.pdf)|
+| Nano (R2)     | ATMega168     | [STK500v1](https://github.com/codaris/ArduinoSketchUploader/blob/master/Documentation/Documentation/STK500v1.pdf)|
+| Nano (R3)     | ATMega328P    | [STK500v1](https://github.com/codaris/ArduinoSketchUploader/blob/master/Documentation/Documentation/STK500v1.pdf)|
+| Uno (R3)      | ATMega328P    | [STK500v1](https://github.com/codaris/ArduinoSketchUploader/blob/master/Documentation/Documentation/STK500v1.pdf)|
 
 
-## How to use the library ##
+## Getting Started
 
 Install the package using the nuget package manager console:
 
@@ -43,7 +45,13 @@ uploader.UploadSketch();
 
 One can try to auto-detect the COM port by omitting it.
 
-## Logging ##
+## Documentation
+
+View the API documentation by clicking the link below:
+
+* [ArduinoUploaderCore Documentation](https://codaris.github.io/ArduinoSketchUploader/)
+
+## Logging 
 
 In earlier versions of the library, it emitted log messages through a dependency on `NLog`. From an architectural point of view, it is suboptimal to be forcing a dependency on a particular logging framework from library code.
 

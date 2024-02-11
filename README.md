@@ -1,12 +1,8 @@
-# ArduinoSketchUploaderCore
-
-## About this Fork
-
-This is a fork of the [ArduinoSketchUploader](https://github.com/twinearthsoftware/ArduinoSketchUploader) project created by Christophe Diericx. It has been altered to use .NET Standard and .NET 6 as well as adding support for the new Arduino Nano Bootloader.
-
-## About ArduinoSketchUploader
+# ArduinoSketchUploader
 
 This repository contains a .NET library and a corresponding Windows command line utility that can be used to upload a compiled sketch (.HEX) directly to an Arduino board over USB. It talks to the boards bootloader over the serial (USB) connection, much like *avrdude* does (when invoked from the Arduino IDE, or from the command line).
+
+This is a fork of the [ArduinoSketchUploader](https://github.com/twinearthsoftware/ArduinoSketchUploader) project created by Christophe Diericx. It has been altered to use .NET Standard and .NET 6 as well as adding support for the new Arduino Nano Bootloader.  
 
 ![ArduinoSketchUploader](Images/ArduinoSketchUploader.png)
 
@@ -28,9 +24,9 @@ The library has been tested with the following configurations:
 
 > Support for Mega 1284 was added by [https://github.com/sijk](https://github.com/sijk), thanks!
 
-## How to use the command line application ##
+## How to use the command line application 
 
-[Download the latest Windows binaries here (.zip file, version 4.0.0).](https://github.com/christophediericx/ArduinoSketchUploader/releases/download/v3.2.0/ArduinoSketchUploader-3.2.0.zip)
+[Download the latest Windows binaries here (.zip file, version 4.0.0).](https://github.com/codaris/ArduinoSketchUploader/releases/download/v4.0.0/ArduinoSketchUploader-4.0.0.zip)
 
 When running *ArduinoSketchUploader.exe* without arguments, the application will document its usage:
 
@@ -68,7 +64,7 @@ If only a single COM port is in use on the system (used by the attached Arduino)
 ArduinoSketchUploader.exe --file=C:\MyHexFiles\myHexFile.hex --model=UnoR3
 ```
 
-## How to use the .NET library ##
+## How to use the .NET library 
 
 [![NuGet version](https://badge.fury.io/nu/ArduinoUploaderCore.svg)](https://badge.fury.io/nu/ArduinoUploaderCore)
 
@@ -96,7 +92,13 @@ uploader.UploadSketch();
 
 > As discussed above, one can try to auto-detect the COM port by omitting it.
 
-## Logging ##
+## Documentation
+
+View the API documentation by clicking the link below:
+
+* [ArduinoUploaderCore Documentation](https://codaris.github.io/ArduinoSketchUploader/)
+
+## Logging 
 
 In earlier versions of the library, it emitted log messages through a dependency on `NLog`. From an architectural point of view, it is suboptimal to be forcing a dependency on a particular logging framework from library code.
 
