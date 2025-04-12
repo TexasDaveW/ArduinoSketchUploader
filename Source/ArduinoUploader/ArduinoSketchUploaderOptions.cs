@@ -21,5 +21,10 @@ namespace ArduinoUploader
         /// Gets or sets the arduino model.
         /// </summary>
         public ArduinoModel ArduinoModel { get; set; }
+
+        /// <summary>
+        /// Gets or sets the baud rate used for uploading. Defaults to 57600.
+        /// </summary>
+        public int BaudRate { get; set; } = 57600;
     }
 }
