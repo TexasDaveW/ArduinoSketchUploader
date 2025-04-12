@@ -117,9 +117,16 @@ namespace ArduinoUploader
                 var postOpenResetBehavior = ParseResetBehavior(modelOptions.PostOpenResetBehavior);
                 var closeResetBehavior = ParseResetBehavior(modelOptions.CloseResetBehavior);
 
-                var serialPortConfig = new SerialPortConfig(serialPortName,
-                    modelOptions.BaudRate, preOpenResetBehavior, postOpenResetBehavior, closeResetBehavior,
-                    modelOptions.SleepAfterOpen, modelOptions.ReadTimeout, modelOptions.WriteTimeout);
+		var serialPortConfig = new SerialPortConfig(
+ 		   serialPortName,
+		    _options.BaudRate,  // ← Use this instead of modelOptions.BaudRate
+ 		   preOpenResetBehavior,
+ 		   postOpenResetBehavior,
+ 		   closeResetBehavior,
+      		 modelOptions.SleepAfterOpen,
+  		  modelOptions.ReadTimeout,
+ 		   modelOptions.WriteTimeout);
+
 
                 switch (modelOptions.Protocol)
                 {
